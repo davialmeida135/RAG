@@ -1,0 +1,208 @@
+T4/Season 3:
+- Drops in Korea in July
+- Drops in Russia in September (Confirmed)
+- Drops in Global in September (Presumed based off of Russia timeline)
+
+NOTE: The show was 2.5 hours but they didn't beat around the bush. They zoomed through all the stuff that they're planning and according to KR viewers we're going to get more 'in-depth' details on these changes in a devblog later this month.
+
+Basically, everything that you can think of was mentioned with the exception of a new class. But honestly, that's fine.
+
+Korean Roadmap
+--------------
+
+July
+- Level Cap Raises
+  - Character Lv. 60 -> 70
+  - Roster Lv. 300 -> 400
+  - More skill points.
+  - We don't know if skills can be leveled to 13 and 14 and 65 and 70 respectively, but there are old screenshots that show that you can from previous LOA ON.
+    - If this is true, that means identity skills and Awakening skills also would automatically upgrade at 65 and 70 respectively.
+- North Kurzan Story
+  - Implications in the story is that for the 'good' timeline to happen, Kazeros MUST be revived. The heroes have to let him revive.
+- UI update to world map. Contents are placed around the world map on the continent (not too important, just looks nicer).
+- T4 Gear
+  - The next step for accessories and gems. It appears that most existing accessories will be able to be upgraded into T4, so you won't need new ones.
+  - Gems can be converted to T4 but will downgrade. For example, a Lv. 10 T3 gem converts to a Lv. 8 T4 gem. This process costs silver.
+    - We don't know the max potency of these gems. But a Lv. 9 T4 damage gem gives 40% increased damage. Lv. 8 T4 gives 36%. Maybe Lv. 10 gives 50%?
+    - Cooldown gems give more cooldown as well in T4. We're presuming (based on the screen) Lv. 9 Cooldown is 22%.
+    - They did confirm that gems have auxiliary functions in T4 though, so you get more stuff from the T4 gems (e.g. a gem that increases the amount of shield a support skill provides).
+    - Both damage and cooldown gems also increase base damage by a small amount in addition to the other effects.
+    - Supports will need gems now as well like DPS.
+- Trajectory of the Earthshattering Hellfire Raid (Wineblue's translation)
+  - 2 Gate Raid
+  - G1 vs. Resurrected Akkan (he survives in the story, this happens after Echidna's raid)
+  - G2 vs. Abyss Monarch Aegir
+     - This is a new character but they seem to be the rulers of the Abyss. There's more than one of them.
+  - This raid rewards Ancient T4 gear.
+     - Ancient T4 has the same stats as Relic T4 gear but can be upgraded beyond +20 (up to +25).
+- New Collectible (Crimson's Maps)
+  - New horizontal content. It's in search of the Pirate King Crimson's treasure that the 4 Pirate Lords (we know three: Calvasus, Blackfang, Darkiel) are searching for. Some of this content involves sailing, some of it involves other stuff.
+- Kurzan Battleground
+  - A system that eases Chaos Dungeon daily.
+  - Can be entered once daily, or three days of rested.
+  - Uses 100 Chaos Dungeon energy but takes 1.5x the time to clear as one Chaos Dungeon (so overall faster and less load screens).
+- Khnuart Castle
+  - This where you can get T4 Relic gear.
+     - You can access Fort Ken Wat at item level 1620 and it drops gear that you can succeed into that is item level 1640 (so you jump 20 item levels). Not sure what your +19 Akkan gear would downgrade to specifically.
+     - Advanced honing is separate from this so it doesn't go to waste.
+- Ark Passive System
+  - This is a replacement for the ENTIRE gearing system. You can at ANY time toggle this on or off and it will override all of your gear.
+  - The director mentioned that you won't utilize the Ark Passive system immediately. Each tree has its own points and you won't have access to all the points immediately.
+  - There are three trees that you allocate points to. The third one (Ascension) arrives in August with the 3rd Awakening.
+     - Evolution: Pertains to character stats and set bonuses. This is where you'll find things like crit/spec/swiftness, as well as the power increases related to sets.
+     - Enlightenment: This one controls traits related to your Class Engraving. There's typical stuff here and then there's new stuff (e.g. a passive that makes Gunlancer's spacebar go forward instead of backstep).
+- Ark Pass
+  - Stoopzz doesn't like the towel on the head for the male.
+- New Swimsuits for Summer
+  - BIG... they're big.
+- Solo Raids
+  - Valtan up to Voldis (1600).
+  - Rewards more bound materials than the group version of the raid.
+  - Rewards less gold than the group version of the raids.
+  - You can select a powerful buff that helps you solo the content and help your playstyle.
+    - For positional players that use backattack and headattack one of the choices makes it so that you hit positional from any side, 100% of the time.
+    - For support players their debuffs will drastically increase their damage allowing them to do DPS-levels of damage while in support build.
+  - Counts as one of your gold raids for the week.
+  - If you enter solo version that week you can't enter group version and vice versa.
+- Events with mats targeting newer players.
+  - The free 3x5 engraving and free gems (up to T3 Lv. 7) now apply to every single character in your roster that's in T3, not just the event character.
+    - Presumably that's forever now? Not entirely sure. As in you'd have access to these perks outside of the event periods, year-round.
+
+August
+- 3rd Awakening
+    - All classes receive 2 new Ultimate Awakenings. These are empowered versions of your existing two Awakenings. During the video demo they showed one of the two for every class.
+       - The way it works is that during combat there's a gauge that fills around the skill icon and when it's filled, the next time you cast the Awakening it's in its Ultimate form.
+    - All classes additionally receive 2-3 new Ultimate Skills.
+       - These are slotted in a new hotbar slot (default: T, R.I.P. auto-run).
+    - Currently theorized that the classes that receive a 3rd one are the transformation classes.
+    - You have to complete a quest to gain access to these. It's completed once per roster. 
+- Ark Passive System (Pt. 2)
+   - This is for the third tab that augments your Ultimate Awakening and Skills.
+     - Ascension: This one improves the power of your Ultimate Awakening and your Ultimate Awakening Skills (this is in lieu of tripods for these).
+- Super Mokoko Express
+  - Supports growth up to 1600.
+     - Silver honing is increased to 1540.
+     - General honing nerf to 1580.
+     - Elixir confirmed nerf.
+     - Transcendence confirmed nerf.
+     - According to the director the amount of materials gained for both systems will be about double and the gold costs will be about halved.
+- Pet Improvements
+  - Pets go up to Relic grade now.
+  - They can get special Relic attributes.
+     - These attributes upgrade stronghold-related functions (e.g. stronghold life skills, expeditions, and crafting).
+  - They can squad up now with other pets (called a Patrol) and you benefit from all of their attributes at once.
+- Buzzling Island
+  - Bzzzzzzzzzzzzzzzzz.
+  - Has mat rewards (targeted towards newer players).
+
+September
+- Requiem of the Nightmare Raid
+  - 2 Gate Raid
+  - G1 vs. Narok
+     - This is a new character but they seem to be the rulers of the Abyss. 
+  - G2 vs. Empowered Brelshaza (no longer horny)
+  - Normal mode provides Relic T4 bracelets.
+  - Hard mode provides Ancient T4 bracelets.
+- PVP Update
+  - FFA and LTS are removed for a new 1v1 game mode.
+  - Rank no longer decays.
+  - Whenever you reach a new rank you get a one-time reward immediately (don't have to wait until the end of season).
+- New Skins (dunno what they look like yet)
+
+Miscellaneous Stuff (not sure when exactly these happens)
+
+- More Thaemine nerfs are incoming.
+  - This is ON TOP of the extra nerfs that Global version got. So Global version nerfs + even more.
+    - Clash difficulty is being reduced.
+    - The pattern where all the safe spots close up will now always have at least one guaranteed safe spot in all quadrants.
+    - G1 eye pattern in hard mode can straight up be skipped now if you hit 0 HP instead of being forced to do it.
+- Currencies Combined
+  - Stronghold Seals into 1
+  - Sailing Tokens into 1
+  - Legion Raid Condoms into 1
+  - Providence Stones removed
+- Improved UI Elements
+  - Damage numbers can now be truncated in the options (instead of 1,000,000 damage you'd see 1M).
+  - New cursors (example shown was a sword mouse cursor).
+- Stronghold Improvements
+  - UI Improvements
+  - Merchant goods always available so you don't have to hunt down specific merchants anymore for things like runes.
+  - Stronghold activities have been improved in the UI so it takes less clicks to go through the menus.
+- New Runes
+  - The example that they showed was a legendary rune called Vision that increases Cast Speed by 10% and Stagger by 20% on the skill that it's equipped to.
+- Increased AP and damage increased are going to be merged so there is no AP increase anymore (which means you don't have to worry about reduced AP increase efficacy in certain raids or Atropine efficiency).
+- Guild Updates
+  - Roster-wide Guild
+    - This can be opt-out. If you want your alts to be in another guild you can do that still.
+  - Simplified guild missions. Bloodstones are awarded immediately instead of on a weekly payout.
+- They're going to update life skills to make it so that other life skills are worth doing other than just excavation.
+  - They said they're going to make higher rarity tools easier to get cause right now they're too expensive.
+  - Orehas can be made from any profession.
+  - Profession level cap raised to 70.
+- The following contents are straight-up getting deleted:
+  - Chaos Line
+  - Thronespire
+  - GvG
+  - Rehearsal
+  - Rowen's Tuluvik
+- Updating new player guidance resources in-game for better direction.
+- You have to upgrade your bracelet to T4. Your current bracelet has reduced efficacy on enemies over level 60 which we're going to start fighting after T4.
+  - Not currently known yet if you can upgrade T3 bracelets to T4.
+  - T4 bracelets appear to have higher stat caps on the lines.
+- There are card changes.
+  - There is a card set that increases damage by the same amount as LOS but for every element now.
+     - Not sure if these new sets will use new cards or existing ones.
+  - Bonuses for activating card sets are now at 12, 18, 24, and 30 so the jump from 18 to 30 no longer is as bad.
+- A new combat mechanic called Just Guard has been added.
+  - This is essentially a parry.
+  - During certain boss patterns and mechanics if you're standing in the right spot you can press G (I guess you can reassign this key) to prevent the attack from happening.
+  - All classes can perform a Just Guard.
+  - The example shown was on Hell Hanumatan. But we're going to experience this mechanic mainly first in the Kazeros raids upcoming.
+  - This is not a replacement for Counter.
+- When re-rolling the stats on T4 bracelets, you can either select your existing stats or accept the new ones. You're not forced into the new stats when you re-roll them like you currently are.
+- Accessories can now be honed.
+  - 100% success chance if you have the mats and gold.
+  - However the stat that you get from it is RNG.
+  - Honed accessories can be sold in the auction house.
+  - The actual stat lines are very small but add up. We don't know how high you can upgrade accessories. Assuming currently up to +3 for a total of three lines.
+- In the Ark Passive system your stone still matters.
+  - At 6, 7, 9, and 10 nodes cut on an engraving you empower that engraving with additional stats.
+  - Old malus effects (red engravings) are activated at 6, 8, and 10 nodes.
+- Engravings are being rebalanced.
+  - Some engravings that see low use will be buffed.
+  - He still thinks that there will be engraving metas but some of these engravings will be less bad.
+    - Still won't use them lol.
+  - In the Ark Passive system, you have a base engraving effect (blue). We'll use Grudge as an example. So at the start, your Grudge provides you 12% damage to bosses.
+     - You need to read purple books, then legendary books, then relic books.
+     - Every 5 (presumed) books you read will add to the total damage bonus of your base engraving. So after finishing purple books, it's another 3%, then another 3% from reading all the legendary books, then another 3% from reading all the relic books. So if you've read all the books, then the 12% of Grudge becomes 21%.
+        - Your stone can further this bonus from activating the nodes when cutting it. For Grudge as an example, you can get up to 6% more damage to bosses from cutting 10 nodes, which brings Grudge's total bonus up to 27% damage to bosses. 
+- Sidereal weapons will gain access to Ella Lv. 2 and later on Sidereal levels +9 and +10.
+  - Holy fuck that's gonna be expensive...
+- In the Ark Passive system your stone still matters a little bit.
+  - Even though you can select 6x3 of whatever you want, your stone will add extra stats to that engraving depending on how many nodes you hit.
+  - So if you have a Grudge stone with 9 nodes for example, your Grudge will provide the usual 20% damage to bosses but even more damage on top of that (up to 6%).
+- They updated the NPC models for around 15 NPCs. They actually look good now (e.g. Shandi, Balthorr).
+- Any glow that you've unlocked you can now wear cosmetically overriding your current gear.
+- QOL that allows you to do more activities while waiting in Party Finder.
+  - For example, while waiting for a party to fill now you can do Chaos Dungeon instead of being stuck in town.
+- There is no longer an 18 limit on the amount of upgraded tripods your build can use. If your build has more than 18 you can use more than 18 now.
+- Instrument Ensembles
+  - You can actually play custom music now with various instruments and in a group.
+  - This is in October.
+- New Music Box Entries
+- Quality cap is now increased to 120 for armors and weapons in T4.
+  - There is a pity system introduced now for these T4 items. If you fail and fill this enough times to 100% the next tab is guaranteed to increase the quality.
+    - It is not currently known how many taps are needed to fill this pity but based off of old pity systems I'm not super hopeful.
+    - It's also not known if the % odd rates are going to be adjusted either.
+- Relic books are now introduced. You need to read 5 Relic books to learn the Relic engraving.
+  - This means that standard build can go to 6x3 now (maybe up to 6x3+2). In the Ark Passive system, ability stones can augment engravings further (explained below).
+- Voldis G3 removed entirely including the running segment. After G2, you'll teleport immediately to current G4's workshop area.
+- Lower level content gold nerfs. I don't think these will arrive at Global servers soon because all of these raids are phased out in Korea now (it took forever for gold nerfs to hit west historically).
+  - Brelshaza Normal: 3000 Gold 1-3, G4 1600
+  - Brelshaza Hard: 3600 Gold 1-3, G4 2000
+  - Kayangel Normal: 3600 Gold
+  - Kayangel Hard: 4800 Gold
+  - Akkan Normal: 5400 Gold
+  - Akkan Hard: 7500 Gold
+  - Voldis Normal: 6500 Gold
+  - Voldis Hard: 13000 Gold

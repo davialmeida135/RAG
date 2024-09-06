@@ -1,19 +1,21 @@
 import argparse
 import os
 import shutil
-from langchain.document_loaders.pdf import PyPDFDirectoryLoader
+from langchain.document_loaders import PyPDFLoader, Docx2txtLoader, TextLoader, CSVLoader, UnstructuredExcelLoader
+
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.schema.document import Document
 from get_embedding_function import get_embedding_function
-from langchain.vectorstores.chroma import Chroma
+from langchain_chroma import Chroma
+
+import mimetypes
 
 
 CHROMA_PATH = "chroma"
 DATA_PATH = "data"
 
-
 def main():
-
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = ''
     # Check if the database should be cleared (using the --clear flag).
     parser = argparse.ArgumentParser()
     parser.add_argument("--reset", action="store_true", help="Reset the database.")
@@ -23,14 +25,45 @@ def main():
         clear_database()
 
     # Create (or update) the data store.
+    print("Loading Documents")
     documents = load_documents()
+    print(len(documents))
+    #for doc in documents:
+    #   print(doc.page_content.strip()[:60] + "...")
+        
     chunks = split_documents(documents)
     add_to_chroma(chunks)
 
 
 def load_documents():
-    document_loader = PyPDFDirectoryLoader(DATA_PATH)
-    return document_loader.load()
+    documents = []
+    for root, _, files in os.walk(DATA_PATH):
+        for file in files:
+            file_path = os.path.join(root, file)
+            mime_type, _ = mimetypes.guess_type(file_path)
+            if mime_type == "application/pdf":
+                print("PDF DETECTED")
+                loader = PyPDFLoader(file_path)
+                documents.extend(loader.load())
+            elif mime_type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+                print("DOCX DETECTED")
+                loader = Docx2txtLoader(file_path)
+                documents.extend(loader.load())
+            elif mime_type == "text/plain":
+                print("TXT DETECTED")
+                loader = TextLoader(file_path)
+                documents.extend(loader.load())
+            elif mime_type == "text/csv":
+                print("CSV DETECTED")
+                loader = CSVLoader(file_path)
+                documents.extend(loader.load())
+            elif mime_type in ["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]:
+                print("EXCEL DETECTED")
+                loader = UnstructuredExcelLoader(file_path)
+                documents.extend(loader.load())
+            else:
+                print(f"Unsupported file type: {mime_type} for file {file_path}")
+    return documents
 
 
 def split_documents(documents: list[Document]):
@@ -57,7 +90,15 @@ def add_to_chroma(chunks: list[Document]):
     existing_ids = set(existing_items["ids"])
     print(f"Number of existing documents in DB: {len(existing_ids)}")
 
+    current_ids = set(chunk.metadata["id"] for chunk in chunks_with_ids)
+
+    # Remove documents from the database that are not present in the folder.
+    ids_to_remove = existing_ids - current_ids
     # Only add documents that don't exist in the DB.
+    if ids_to_remove:
+        print(f"Removing documents not present in the folder: {len(ids_to_remove)}")
+        db.delete(ids=list(ids_to_remove))
+        
     new_chunks = []
     for chunk in chunks_with_ids:
         if chunk.metadata["id"] not in existing_ids:
@@ -67,7 +108,7 @@ def add_to_chroma(chunks: list[Document]):
         print(f"👉 Adding new documents: {len(new_chunks)}")
         new_chunk_ids = [chunk.metadata["id"] for chunk in new_chunks]
         db.add_documents(new_chunks, ids=new_chunk_ids)
-        db.persist()
+        #db.()
     else:
         print("✅ No new documents to add")
 
