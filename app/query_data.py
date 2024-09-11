@@ -7,29 +7,39 @@ from get_embedding_function import get_embedding_function
 import time
 CHROMA_PATH = "chroma"
 
-PROMPT_TEMPLATE = """
+'''PROMPT_TEMPLATE = """
 Answer the question based only on the following context:
 
 {context}
 
 ---
 
-Answer the question based on the above context: {question}
+Answer the question based on the above context with a limit of 5 sentences: {question}
+"""
+'''
+
+PROMPT_TEMPLATE = """ 
+Responda a pergunta baseado apenas no seguinte contexto:
+{context}
+
+---
+
+Responda a pergunta baseado apenas no contexto acima com limite de 5 frases: {question}
 """
 
 
 def main():
     # Create CLI.
     start_time = time.time() 
-    parser = argparse.ArgumentParser()
+    '''parser = argparse.ArgumentParser()
     parser.add_argument("query_text", type=str, help="The query text.")
     args = parser.parse_args()
-    parse_time = time.time() - start_time
-    query_text = args.query_text
+    parse_time = time.time() - start_time'''
+    query_text = "Como funciona a proficiência no BTI?"
     query_rag(query_text)
-    query_time = time.time() - start_time
-    print(f"Parse Time: {parse_time}")
-    print(f"Query Time: {query_time - parse_time}")
+    query_time = time.time() 
+    #print(f"Parse Time: {parse_time}")
+    print(f"Query Time: {query_time - start_time}")
 
 
 def query_rag(query_text: str):
@@ -40,14 +50,19 @@ def query_rag(query_text: str):
     
 
     # Search the DB.
-    results = db.similarity_search_with_score(query_text, k=10)
+    results = db.similarity_search_with_score(query_text, k=5)
+    
+    for doc, _score in results:
+        print(doc.page_content)
+        
     embed_time = time.time() - query_time
     context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
     prompt = prompt_template.format(context=context_text, question=query_text)
     # print(prompt)
 
-    model = Ollama(model="mistral")
+    model = Ollama(model="gemma2:2b", base_url="http://192.168.1.64:11434")
+    #model = Ollama(model="gemma2:2b")
     load_model_time = time.time() - query_time
     response_text = model.invoke(prompt)
     answer_time = time.time() - query_time
@@ -59,5 +74,5 @@ def query_rag(query_text: str):
     return response_text
 
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()

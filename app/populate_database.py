@@ -1,7 +1,8 @@
 import argparse
 import os
 import shutil
-from langchain.document_loaders import PyPDFLoader, Docx2txtLoader, TextLoader, CSVLoader, UnstructuredExcelLoader
+from langchain.document_loaders import PyPDFLoader, Docx2txtLoader, TextLoader, CSVLoader
+from langchain_community.document_loaders import UnstructuredExcelLoader
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.schema.document import Document
@@ -26,15 +27,20 @@ def main():
 
     # Create (or update) the data store.
     print("Loading Documents")
-    documents = load_documents()
+    documents = load_documents()    
     print(len(documents))
     #for doc in documents:
     #   print(doc.page_content.strip()[:60] + "...")
-        
+    
+    
     chunks = split_documents(documents)
     add_to_chroma(chunks)
 
-
+def update_embeds():
+    documents = load_documents()    
+    chunks = split_documents(documents)
+    add_to_chroma(chunks)
+    
 def load_documents():
     documents = []
     for root, _, files in os.walk(DATA_PATH):
@@ -147,5 +153,5 @@ def clear_database():
         shutil.rmtree(CHROMA_PATH)
 
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()

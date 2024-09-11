@@ -1,0 +1,53 @@
+/* Basic Styling for the Page Layout */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar {
+    border-right: 1px solid #ddd;
+}
+
+/* Chat Window Styles */
+.chat-window {
+    overflow-y: auto;
+    max-height: 85vh;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+.message {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    max-width: 75%;
+}
+
+.message-user {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.message-bot {
+    background-color: #e9ecef;
+    color: black;
+    align-self: flex-start;
+}
+
+.chat-input {
+    border-top: 1px solid #ddd;
+}
+
+.list-group-item {
+    margin-bottom: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #sidebar {
+        display: none;  /* Hide the sidebar on small screens */
+    }
+}

@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  backend:
+    #image: rag-api-image
+    build:
+      context: app
+      dockerfile: Dockerfile
+    container_name: rag-api-app
+    ports:
+      - "5000:5000"
+
+    volumes:
+      - .:/code
+    environment:
+      FLASK_APP: app/app.py
+      FLASK_RUN_HOST: 0.0.0.0
+    depends_on:
+      - ollama
+    command: flask run --debug
+  frontend:
+    #image: rag-frontend-image
+    build:
+      context: page
+      dockerfile: Dockerfile
+    container_name: rag-frontend-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./page:/page
+    environment:
+      NODE_ENV: development
+    command: npm start
+  ollama:
+    build:
+      context: ollama
+      dockerfile: Dockerfile
+    image: ollama/ollama:latest
+    container_name: ollama-service
+    volumes:
+        - ./ollama:/root/.ollama
+        - ./ollama/entrypoint.sh:/entrypoint.sh
+    ports:
+      - "11434:11434"
+    environment:
+      OLLAMA_PORT: 11434
+      OLLAMA_HOST: 0.0.0.0
+      tty: true
+    restart: always
+    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
