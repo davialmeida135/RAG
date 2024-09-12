@@ -5,7 +5,7 @@ from langchain_community.llms.ollama import Ollama
 
 from get_embedding_function import get_embedding_function
 import time
-CHROMA_PATH = "chroma"
+from config import CHROMA_PATH
 
 '''PROMPT_TEMPLATE = """
 Answer the question based only on the following context:
@@ -60,7 +60,7 @@ def query_rag(query_text: str):
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
     prompt = prompt_template.format(context=context_text, question=query_text)
     # print(prompt)
-
+    print("VAMOS DE INFERENCIA ========================")
     model = Ollama(model="gemma2:2b", base_url="http://192.168.1.64:11434")
     #model = Ollama(model="gemma2:2b")
     load_model_time = time.time() - query_time

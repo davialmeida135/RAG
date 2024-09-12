@@ -4,12 +4,16 @@ import os
 from query_data import query_rag
 from populate_database import clear_database, update_embeds
 from flask_cors import CORS
+from config import DATA_PATH
+
 app = Flask(__name__)
 CORS(app)
+
 # Configuration
-UPLOAD_FOLDER = 'data'
+
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx', 'csv', 'xlsx'}
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['UPLOAD_FOLDER'] = DATA_PATH
+print(DATA_PATH)
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -36,9 +40,13 @@ def upload_file():
     if file.filename == '':
         return jsonify({'error': 'No selected file'}), 400
     if file and allowed_file(file.filename):
+        print("Arquivo aceito")
         filename = secure_filename(file.filename)
+        print(f"Nome do arquivo: {filename}")
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        print("Arquivo salvo")
         update_embeds()
+        print("Embeddings updated")
         return jsonify({'success': 'File uploaded successfully'}), 200
     else:
         return jsonify({'error': 'File type not allowed'}), 400

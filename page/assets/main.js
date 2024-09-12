@@ -7,6 +7,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const uploadResponse = document.getElementById('uploadResponse');
     const fileList = document.getElementById('fileList');
 
+    async function loadFileList() {
+        try {
+            console.log('Loading file list');
+            const response = await axios.get(`${apiUrl}/files`);
+            const files = response.data.files;
+            console.log(files);
+    
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = '';  // Clear the current list
+    
+            files.forEach(file => {
+                const listItem = document.createElement('li');
+                listItem.classList.add('list-group-item');
+                listItem.textContent = file;
+    
+                // Add a delete button for each file
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.classList.add('btn', 'btn-danger', 'btn-sm', 'ml-2');
+                deleteButton.onclick = () => deleteFile(file);
+    
+                listItem.appendChild(deleteButton);
+                fileList.appendChild(listItem);
+            });
+        } catch (error) {
+            console.error('Error loading file list:', error);
+        }
+    }
+
     // Function to append messages to the chat window
     function appendMessage(sender, message) {
         const messageDiv = document.createElement('div');

@@ -11,12 +11,9 @@ from langchain_chroma import Chroma
 
 import mimetypes
 
-
-CHROMA_PATH = "chroma"
-DATA_PATH = "data"
+from config import CHROMA_PATH, DATA_PATH
 
 def main():
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = ''
     # Check if the database should be cleared (using the --clear flag).
     parser = argparse.ArgumentParser()
     parser.add_argument("--reset", action="store_true", help="Reset the database.")
@@ -37,6 +34,7 @@ def main():
     add_to_chroma(chunks)
 
 def update_embeds():
+    print("Updating Embedded Documents ...")
     documents = load_documents()    
     chunks = split_documents(documents)
     add_to_chroma(chunks)
@@ -44,7 +42,9 @@ def update_embeds():
 def load_documents():
     documents = []
     for root, _, files in os.walk(DATA_PATH):
+        print(files)
         for file in files:
+            print(file)
             file_path = os.path.join(root, file)
             mime_type, _ = mimetypes.guess_type(file_path)
             if mime_type == "application/pdf":
